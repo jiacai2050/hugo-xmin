@@ -1,0 +1,6 @@
+<figure>
+  <img src='{{ $.Site.Params.staticRoot }}{{ .Get "url" }}' />
+  {{ if or (isset .Params "caption") (isset .Params "alt") }}
+  <figcaption>{{ (or (.Get "caption") (.Get "alt")) | $.Page.RenderString }}</figcaption>
+  {{ end }}
+</figure>
