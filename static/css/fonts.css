@@ -52,7 +52,7 @@ footer a {
     width: 250px;
 }
 
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 1420px) {
     #table-of-contents {
         position: static;
         padding: 0px;
