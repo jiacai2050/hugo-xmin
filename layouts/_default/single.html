@@ -3,15 +3,15 @@
   <h1>{{ .Title | markdownify }}</h1>
   {{ with .Params.author }}<h2 class="author">{{ . }}</h2>{{ end }}
   <p>
-    <span title="创建时间：{{ .Date }}" class="date">发布时间：{{ .Date.Format "2006-01-02" }}</span>
+    <span title="{{ .Date }}" class="date">{{i18n "date"}}: {{ .Date.Format "2006-01-02" }}</span>
 
     {{ if not (eq .Date .Lastmod) }}
-    &nbsp; <span title="{{ .Lastmod }}">更新时间：{{ .Lastmod.Format "2006-01-02" }}</span>
+    &nbsp; <span title="{{ .Lastmod }}">{{i18n "lastMod"}}: {{ .Lastmod.Format "2006-01-02" }}</span>
     {{ end }}
 
     {{ range $i := (slice "categories" "tags") }}
     {{ with ($.Param $i) }}
-    &nbsp; <span>{{ $i | title}}: {{ range $k := . }}<a href="{{ relURL (print "/" $i "/" $k | urlize) }}">{{$k}}</a></span> {{ end }}
+    &nbsp; <span>{{ i18n $i }}: {{ range $k := . }}<a href="{{ relURL (print "/" $i "/" $k | urlize) }}">{{$k}}</a></span> {{ end }}
     {{ end }}
     {{ end }}
   </p>
