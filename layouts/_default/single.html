@@ -1,16 +1,21 @@
 {{ partial "header.html" . }}
 <div class="article-meta">
-<h1><span class="title">{{ .Title | markdownify }}</span></h1>
-{{ with .Params.author }}<h2 class="author">{{ . }}</h2>{{ end }}
-{{ if (gt .Params.date 0) }}<h3 class="date">{{ .Date.Format "2006/01/02" }}</h3>{{ end }}
-</div>
+  <h1>{{ .Title | markdownify }}</h1>
+  {{ with .Params.author }}<h2 class="author">{{ . }}</h2>{{ end }}
   <p>
+    <span title="创建时间：{{ .Date }}" class="date">发布时间：{{ .Date.Format "2006-01-02" }}</span>
+
+    {{ if not (eq .Date .Lastmod) }}
+    &nbsp; <span title="{{ .Lastmod }}">更新时间：{{ .Lastmod.Format "2006-01-02" }}</span>
+    {{ end }}
+
     {{ range $i := (slice "categories" "tags") }}
     {{ with ($.Param $i) }}
-    {{ $i | title }}: {{ range $k := . }}<a href="{{ relURL (print "/" $i "/" $k | urlize) }}">{{$k}}</a> {{ end }}
+    &nbsp; <span>{{ $i | title}}: {{ range $k := . }}<a href="{{ relURL (print "/" $i "/" $k | urlize) }}">{{$k}}</a></span> {{ end }}
     {{ end }}
     {{ end }}
   </p>
+</div>
 
 {{ with .TableOfContents }}
 <div id="table-of-contents">
@@ -20,7 +25,8 @@
 {{ end }}
 
 <main>
-{{ .Content }}
+  {{ .Content }}
 </main>
 
+{{ partial "content_footer.html" . }}
 {{ partial "footer.html" . }}
