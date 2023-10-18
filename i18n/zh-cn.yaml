@@ -65,7 +65,7 @@
   translation: 文章作者
 
 - id: date
-  translation: 创建时间
+  translation: 创作时间
 
 - id: lastMod
   translation: 上次更新
