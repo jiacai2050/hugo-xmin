@@ -11,7 +11,11 @@
 
     {{ range $i := (slice "categories" "tags") }}
     {{ with ($.Param $i) }}
-    &nbsp; <span>{{ i18n $i }}: {{ range $k := . }}<a href="{{ relURL (print "/" $i "/" $k | urlize) }}">{{$k}}</a></span> {{ end }}
+    &nbsp; <span>{{ i18n $i }}:
+      {{ range $k := . }}
+        <a href="{{ relURL (print "/" $i "/" $k | urlize) }}">{{$k}}</a>
+      {{ end }}
+    </span>
     {{ end }}
     {{ end }}
   </p>
