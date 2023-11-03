@@ -65,10 +65,10 @@
   translation: 文章作者
 
 - id: date
-  translation: 创作时间
+  translation: 发布
 
 - id: lastMod
-  translation: 上次更新
+  translation: 更新
 
 - id: markdown
   translation: 原始文档

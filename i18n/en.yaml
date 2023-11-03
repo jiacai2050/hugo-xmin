@@ -65,10 +65,10 @@
   translation: Author
 
 - id: date
-  translation: Date
+  translation: Published
 
 - id: lastMod
-  translation: LastMod
+  translation: Updated
 
 - id: markdown
   translation: Markdown
