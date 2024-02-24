@@ -24,6 +24,9 @@ body {
     font-size: .9em;
 }
 .title { font-size: 1.1em; }
+footer {
+  font-family: Jost, Optima, Candara, sans-serif;
+}
 footer a { text-decoration: none; }
 hr {
   border-style: dashed;
