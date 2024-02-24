@@ -16,12 +16,12 @@ body {
 }
 .menu, .article-meta, footer { text-align: center; }
 .article-meta>p>span {
-    color: #777;
-    font-size: .9em;
+  color: #777;
+  font-size: .9em;
 }
 .article-meta>p>span>a {
-    color: #777;
-    font-size: .9em;
+  color: #777;
+  font-size: .9em;
 }
 .title { font-size: 1.1em; }
 footer {
@@ -60,3 +60,21 @@ table {
 table thead th { border-bottom: 1px solid #ddd; }
 th, td { padding: 5px; }
 thead, tfoot, tr:nth-child(even) { background: #eee; }
+
+ul.blog-posts {
+  list-style-type: none;
+  padding: unset;
+}
+
+ul.blog-posts li {
+  display: flex;
+  padding: 3px 20px;
+  border-left: 1px solid #cacaca;
+}
+
+ul.blog-posts time {
+  color: #8a8a8a;
+}
+ul.blog-posts li span {
+  flex: 0 0 100px
+}

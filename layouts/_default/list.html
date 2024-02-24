@@ -6,13 +6,18 @@
 
 {{ .Content }}
 
-<ul>
+<ul class="blog-posts">
   {{ $pages := .Pages }}
   {{ if .IsHome }}{{ $pages = .Site.RegularPages }}{{ end }}
   {{ range (where $pages "Section" "!=" "") }}
   <li>
-    <b>{{ .Date.Format "2006/01/02" }}</b>
-     —
+    <span>
+      <i>
+        <time datetime='{{ .Date.Format "2006-01-02" }}' pubdate>
+          {{ .Date.Format  "2006-01-02" }}
+        </time>
+      </i>
+    </span>
     <a href="{{ .RelPermalink }}">{{ .Title }}</a>
   </li>
   {{ end }}
