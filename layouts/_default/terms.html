@@ -1,12 +1,11 @@
 {{ partial "header.html" . }}
 
-{{ $type := .Type }}
 <div>
   <h1><span class="title">{{ .Title }}</span></h1>
   <ul class="terms-tags">
     {{ range .Data.Terms.ByCount }}
     <li>
-      <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}<sup>{{ .Count }}</sup></a>
+      <a href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle | strings.FirstUpper }}<sup>{{ .Count }}</sup></a>
     </li>
     {{ end }}
   </ul>
