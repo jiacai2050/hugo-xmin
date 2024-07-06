@@ -78,3 +78,17 @@ ul.blog-posts time {
 ul.blog-posts li span {
   flex: 0 0 100px
 }
+
+.terms-tags li {
+  display: inline-block;
+  margin: 10px;
+  font-weight: 500;
+}
+
+.terms-tags a {
+  display: block;
+  padding: 3px 10px;
+  background: rgb(214, 214, 214);
+  border-radius: 6px;
+  transition: transform 0.1s;
+}
