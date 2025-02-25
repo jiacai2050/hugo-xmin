@@ -19,7 +19,7 @@
     {{ end }}
 
     <meta name="description" content="{{ if .IsHome }}{{ $.Site.Params.description }}{{ else }}{{ .Summary }}{{ end }}" />
-    {{ with .Site.Author.name -}}
+    {{ with .Site.Params.Author.name -}}
     <meta name="author" content="{{ . }}">
     {{ end -}}
     {{ hugo.Generator }}
