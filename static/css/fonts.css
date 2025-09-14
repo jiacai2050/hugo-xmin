@@ -1,63 +1,62 @@
 :root {
-  --bg-body: white;
-  --bg-block: #f9f9f9;
-  --border-color: #ddd;
-  --box-shadow: 5px 5px 5px #eee;
+    --bg-body: white;
+    --bg-block: #f9f9f9;
+    --border-color: #ddd;
+    --box-shadow: 5px 5px 5px #eee;
 }
 
 body {
-  min-height: calc(100vh - 3em);
-  background-color: var(--bg-body);
+    min-height: calc(100vh - 3em);
+    background-color: var(--bg-body);
 
-  font-family: sans-serif;
-  /* max-width: 85ch; */
-  /* font-size: 1.25em; */
-  /* line-height: 1.65; */
-  padding: 3em 1em;
+    font-family: sans-serif;
+    /* max-width: 85ch; */
+    /* font-size: 1.25em; */
+    /* line-height: 1.65; */
+    padding: 3em 1em;
 }
 
 figure {
-  text-align: center;
-  font-style: oblique;
-  font-size: smaller;
+    text-align: center;
+    font-style: oblique;
+    font-size: smaller;
 }
 
 ul.menu a {
-  color: blue;
-}
-
-footer a {
-  color: blue;
+    color: blue;
 }
 
 #table-of-contents {
-  position: fixed;
-  top: 50%;
-  right: 30px;
-  transform: translateY(-50%);
-  background-color: var(--bg-block);
+    position: fixed;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    background-color: var(--bg-block);
 
-  padding: 10px;
-  box-shadow: var(--box-shadow);
-  width: 250px;
+    padding: 10px;
+    box-shadow: var(--box-shadow);
+    width: 250px;
 }
 
 @media screen and (max-width: 1420px) {
-  #table-of-contents {
-    position: static;
-    padding: 0px;
-    transform: none;
-  }
+    #table-of-contents {
+        position: static;
+        padding: 0px;
+        transform: none;
+    }
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --bg-body: #dedad6;
-    --bg-block: #d6d1cc;
-    --border-color: #999;
-    --box-shadow: 5px 5px 5px #ccc;
-  }
-  html, img, video, iframe {
-    filter: invert(1);
-  }
+    :root {
+        --bg-body: #dedad6;
+        --bg-block: #d6d1cc;
+        --border-color: #999;
+        --box-shadow: 5px 5px 5px #ccc;
+    }
+    html,
+    img,
+    video,
+    iframe {
+        filter: invert(1);
+    }
 }
